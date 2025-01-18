@@ -20,7 +20,7 @@ WORKDIR /home/${USER_NAME}/app
 # Install rye
 ENV RYE_HOME /home/${USER_NAME}/.rye
 ENV PATH ${RYE_HOME}/shims:${PATH}
-RUN curl -sSf https://rye-up.com/get | RYE_INSTALL_OPTION="--yes" bash \
+RUN curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash \
 	&& rye config --set-bool behavior.use-uv=true
 
 # Install packages
